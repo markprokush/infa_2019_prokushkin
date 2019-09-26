@@ -76,6 +76,7 @@ needle(412, 505, -3.14 / 7)
 c.create_oval(380, 450, 420, 490, outline='white', fill='red', width=0)
 c.create_oval(320, 450, 350, 480, outline='white', fill='#fe8800', width=0)
 
+
 needle(320, 525, 3.14 / 6)
 needle(330, 527, 3.14 / 12)
 needle(340, 520, 0 / 18)
