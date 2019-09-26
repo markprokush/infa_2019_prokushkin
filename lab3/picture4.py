@@ -49,6 +49,8 @@ c.create_oval(440, 503, 448, 511, outline='white', fill='black', width=1)  # г�
 c.create_oval(417, 525, 440, 540, outline='white', fill='#50292a', width=1)  # правая нижняя нога
 c.create_oval(305, 525, 328, 540, outline='white', fill='#50292a', width=1)  # левая нижняя нога
 
+#   иголки за туловищем
+
 needle(320, 500, 3.14 / 6)
 needle(335, 493, 3.14 / 18)
 needle(345, 490, 0 / 18)
@@ -57,13 +59,16 @@ needle(377, 485, -3.14 / 36)
 needle(395, 490, -3.14 / 18)
 needle(413, 490, -3.14 / 9)
 
-penSize(0)
+#   яблоко и грибок
+
 c.create_oval(365,455,380,425, outline='white', fill='white', width=0)
 c.create_oval(345,415,400,430, outline='white', fill='red', width=0)
 c.create_oval(355,417,365,420, outline='white', fill='white', width=1)
 c.create_oval(370,421,376,424, outline='white', fill='white', width=1)
 c.create_oval(379,417,389,420, outline='white', fill='white', width=1)
 c.create_oval(300, 455, 330, 485, outline='white', fill='#fe8800', width=0)
+
+#   иголки перед туловищем
 
 needle(320, 512, 3.14 / 3)
 needle(320, 508, 3.14 / 50)
@@ -73,9 +78,12 @@ needle(367, 500, -3.14 / 25)
 needle(380, 504, -3.14 / 12)
 needle(412, 505, -3.14 / 7)
 
+#   яблоки
+
 c.create_oval(380, 450, 420, 490, outline='white', fill='red', width=0)
 c.create_oval(320, 450, 350, 480, outline='white', fill='#fe8800', width=0)
 
+#   иголки перед туловищем
 
 needle(320, 525, 3.14 / 6)
 needle(330, 527, 3.14 / 12)
