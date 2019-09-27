@@ -93,7 +93,8 @@ def hedgehog(a, x, y):
     needle(a*15+x, a*13+y, -3.14 / 12)
     needle(a*33+x, a*15+y, -3.14 / 4)
 
-hedgehog(20, 200, 400)
-
+hedgehog(0.6, 400, 550)
+hedgehog(0.4, 450, 450)
+hedgehog(0.3, 170, 420)
 
 run()
