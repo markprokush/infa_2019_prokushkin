@@ -31,12 +31,12 @@ def hedgehog(a, x, y):
         penSize(2)
         penColor('black')
         brushColor('#290000')
-        polygon({(a * 0 * math.cos(theta) + a * 0 * math.sin(theta) + x1,
+        polygon([(a * 0 * math.cos(theta) + a * 0 * math.sin(theta) + x1,
                   a * (-0) * math.sin(theta) + a * 0 * math.cos(theta) + y1),
                  (a * 16 * math.cos(theta) + a * 0 * math.sin(theta) + x1,
                   a * (-16) * math.sin(theta) + a * 0 * math.cos(theta) + y1),
                  (a * 8 * math.cos(theta) + a * (-70) * math.sin(theta) + x1,
-                  a * (-8) * math.sin(theta) + a * (-70) * math.cos(theta) + y1)})
+                  a * (-8) * math.sin(theta) + a * (-70) * math.cos(theta) + y1)])
 
     needle(a * (-62) + x, a * 15 + y, 3.14 / 4)
     needle(a * (-52) + x, a * 17 + y, 3.14 / 6)
@@ -126,7 +126,7 @@ tree(470, 0, 660, 470)
 
 # hedgehogs:
 
-hedgehog(0.8, 320, 500)
+hedgehog(0.85, 320, 500)
 hedgehog(0.4, 450, 450)
 hedgehog(0.6, 0, 550)
 
