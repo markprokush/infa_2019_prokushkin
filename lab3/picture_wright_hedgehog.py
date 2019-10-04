@@ -3,11 +3,6 @@ from graph import *
 windowSize(800, 800)
 penSize(0)
 c = canvas()
-from graph import *
-
-windowSize(800, 800)
-penSize(0)
-c = canvas()
 
 import math
 
@@ -18,25 +13,30 @@ def tree(x1, y1, x2, y2):
     rectangle(x1, y1, x2, y2)
 
 
-def mushroom(a, x, y):
-    c.create_oval(a * (-10) + x, a * (-50) + y, a * 5 + x, a * (-80) + y, outline='white', fill='white', width=0)
-    c.create_oval(a * (-30) + x, a * (-90) + y, a * 25 + x, a * (-75) + y, outline='white', fill='red', width=0)
-    c.create_oval(a * (-20) + x, a * (-88) + y, a * (-10) + x, a * (-85) + y, outline='white', fill='white', width=1)
-    c.create_oval(a * (-5) + x, a * (-84) + y, a * 1 + x, a * (-81) + y, outline='white', fill='white', width=1)
-    c.create_oval(a * 4 + x, a * (-88) + y, a * 14 + x, a * (-85) + y, outline='white', fill='white', width=1)
+def mushroom(a, x_m, y_m):
+    c.create_oval(a * (-7.5) + x_m, a * (-15) + y_m, a * 7.5 + x_m, a * 15 + y_m, outline='white', fill='white',
+                  width=0)
+    c.create_oval(a * (-27.5) + x_m, a * (-25) + y_m, a * 27.5 + x_m, a * (-10) + y_m, outline='white', fill='red',
+                  width=0)
+    c.create_oval(a * (-17.5) + x_m, a * (-23) + y_m, a * (-7.5) + x_m, a * (-20) + y_m, outline='white', fill='white',
+                  width=1)
+    c.create_oval(a * (-2.5) + x_m, a * (-19) + y_m, a * 3.5 + x_m, a * (-16) + y_m, outline='white', fill='white',
+                  width=1)
+    c.create_oval(a * 6.5 + x_m, a * (-23) + y_m, a * 16.5 + x_m, a * (-20) + y_m, outline='white', fill='white',
+                  width=1)
 
 
 def hedgehog(a, x, y):
-    def needle(x1, y1, theta):  # иголка
+    def needle(x1, y1, theta):  # needle
         penSize(2)
         penColor('black')
         brushColor('#290000')
-        polygon([(a * 0 * math.cos(theta) + a * 0 * math.sin(theta) + x1,
+        polygon({(a * 0 * math.cos(theta) + a * 0 * math.sin(theta) + x1,
                   a * (-0) * math.sin(theta) + a * 0 * math.cos(theta) + y1),
                  (a * 16 * math.cos(theta) + a * 0 * math.sin(theta) + x1,
                   a * (-16) * math.sin(theta) + a * 0 * math.cos(theta) + y1),
                  (a * 8 * math.cos(theta) + a * (-70) * math.sin(theta) + x1,
-                  a * (-8) * math.sin(theta) + a * (-70) * math.cos(theta) + y1)])
+                  a * (-8) * math.sin(theta) + a * (-70) * math.cos(theta) + y1)})
 
     needle(a * (-62) + x, a * 15 + y, 3.14 / 4)
     needle(a * (-52) + x, a * 17 + y, 3.14 / 6)
@@ -48,24 +48,24 @@ def hedgehog(a, x, y):
 
     penSize(3)
     c.create_oval(a * 57 + x, a * 5 + y, a * 80 + x, a * 20 + y, outline='white', fill='#50292a',
-                  width=1)  # правая верхняя нога
+                  width=1)  # right upper leg
     c.create_oval(a * (-75) + x, a * 5 + y, a * (-53) + x, a * 20 + y, outline='white', fill='#50292a',
-                  width=1)  # левая верхняя нога
+                  width=1)  # left upper leg
 
     c.create_oval(a * (-75) + x, a * (-35) + y, a * 75 + x, a * 35 + y, outline='white', fill='#50292a',
-                  width=1)  # туловище
-    c.create_oval(a * 45 + x, a * (-10) + y, a * 95 + x, a * 15 + y, outline='white', fill='#50292a', width=1)  # голова
+                  width=1)  # body
+    c.create_oval(a * 45 + x, a * (-10) + y, a * 95 + x, a * 15 + y, outline='white', fill='#50292a', width=1)  # head
 
-    c.create_oval(a * 90 + x, a * (-2) + y, a * 95 + x, a * 3 + y, outline='white', fill='#50292a', width=1)  # нос
-    c.create_oval(a * 73 + x, a * (-8) + y, a * 81 + x, a * 0 + y, outline='white', fill='black', width=1)  # глаз 1
-    c.create_oval(a * 65 + x, a * (-2) + y, a * 73 + x, a * 6 + y, outline='white', fill='black', width=1)  # глаз 2
+    c.create_oval(a * 90 + x, a * (-2) + y, a * 95 + x, a * 3 + y, outline='white', fill='#50292a', width=1)  # nose
+    c.create_oval(a * 73 + x, a * (-8) + y, a * 81 + x, a * 0 + y, outline='white', fill='black', width=1)  # eye 1
+    c.create_oval(a * 65 + x, a * (-2) + y, a * 73 + x, a * 6 + y, outline='white', fill='black', width=1)  # eye 2
 
     c.create_oval(a * 42 + x, a * 20 + y, a * 65 + x, a * 35 + y, outline='white', fill='#50292a',
-                  width=1)  # правая нижняя нога
+                  width=1)  # right lower leg
     c.create_oval(a * (-70) + x, a * 20 + y, a * (-47) + x, a * 35 + y, outline='white', fill='#50292a',
-                  width=1)  # левая нижняя нога
+                  width=1)  # left lower leg
 
-    #   иголки за туловищем:
+    #   other needles behind the body:
 
     needle(a * (-55) + x, a * (-5) + y, 3.14 / 6)
     needle(a * (-40) + x, a * (-12) + y, 3.14 / 18)
@@ -75,16 +75,15 @@ def hedgehog(a, x, y):
     needle(a * 20 + x, a * (-15) + y, -3.14 / 18)
     needle(a * 38 + x, a * (-15) + y, -3.14 / 9)
 
-    #   яблоко и грибок
+    #   mushroom:
 
-    c.create_oval(a * (-10) + x, a * (-50) + y, a * 5 + x, a * (-80) + y, outline='white', fill='white', width=0)
-    c.create_oval(a * (-30) + x, a * (-90) + y, a * 25 + x, a * (-75) + y, outline='white', fill='red', width=0)
-    c.create_oval(a * (-20) + x, a * (-88) + y, a * (-10) + x, a * (-85) + y, outline='white', fill='white', width=1)
-    c.create_oval(a * (-5) + x, a * (-84) + y, a * 1 + x, a * (-81) + y, outline='white', fill='white', width=1)
-    c.create_oval(a * 4 + x, a * (-88) + y, a * 14 + x, a * (-85) + y, outline='white', fill='white', width=1)
+    mushroom(a, -2.5 * a + x, -65 * a + y)
+
+    #   apple:
+
     c.create_oval(a * (-75) + x, a * (-50) + y, a * (-45) + x, a * (-20) + y, outline='white', fill='#fe8800', width=0)
 
-    #   иголки перед туловищем
+    #   other needles behind the body:
 
     needle(a * (-55) + x, a * 7 + y, 3.14 / 3)
     needle(a * (-55) + x, a * 3 + y, 3.14 / 50)
@@ -94,12 +93,12 @@ def hedgehog(a, x, y):
     needle(a * 5 + x, a * (-1) + y, -3.14 / 12)
     needle(a * 37 + x, a * 0 + y, -3.14 / 7)
 
-    #   яблоки
+    #   other apples:
 
     c.create_oval(a * 5 + x, a * (-55) + y, a * 45 + x, a * (-15) + y, outline='white', fill='red', width=0)
     c.create_oval(a * (-55) + x, a * (-55) + y, a * (-25) + x, a * (-25) + y, outline='white', fill='#fe8800', width=0)
 
-    #   иголки перед туловищем
+    #   needles in front of the body:
 
     needle(a * (-55) + x, a * 20 + y, 3.14 / 6)
     needle(a * (-45) + x, a * 22 + y, 3.14 / 12)
@@ -110,14 +109,14 @@ def hedgehog(a, x, y):
     needle(a * 33 + x, a * 15 + y, -3.14 / 4)
 
 
-# background
+# background:
 
 brushColor(66, 205, 91)
 rectangle(0, 0, 600, 800)
 brushColor(170, 128, 106)
 rectangle(0, 400, 600, 600)
 
-# trees
+# trees:
 
 tree(0, 0, 40, 430)
 hedgehog(0.3, 170, 420)
@@ -125,20 +124,18 @@ tree(60, 0, 170, 600)
 tree(400, 0, 440, 430)
 tree(470, 0, 660, 470)
 
-# hedgehogs
+# hedgehogs:
 
 hedgehog(0.8, 320, 500)
 hedgehog(0.4, 450, 450)
 hedgehog(0.6, 0, 550)
 
-# background mushrooms
+# background mushrooms:
 
-mushroom(1.5, 460, 690)
-mushroom(1.4, 330, 690)
-mushroom(1.3, 260, 690)
-mushroom(1, 200, 690)
-mushroom(0.9, 420, 660)
-
-c.create_oval(-7.5, -15, 7.5, -15, outline='white', fill='white', width=0)
+mushroom(1.5, 450, 590)
+mushroom(1.4, 370, 590)
+mushroom(1.3, 260, 610)
+mushroom(1, 200, 590)
+mushroom(0.9, 420, 590)
 
 run()
