@@ -138,8 +138,4 @@ mushroom(1.3, 260, 610)
 mushroom(1, 200, 590)
 mushroom(0.9, 420, 590)
 
-def Egg():
-    hedgehog(1, 300, 300)
-    MoveObjectBy(hedgehog(1, 300, 300), 20, 20)
-onTimer(Egg, 100)
 run()
